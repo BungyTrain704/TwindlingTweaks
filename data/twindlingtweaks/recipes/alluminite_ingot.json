@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "twindlingtweaks:raw_alluminite"
+  },
+  "result": "twindlingtweaks:alluminite_nugget",
+  "experience": 0.35,
+  "cookingtime": 110
+}

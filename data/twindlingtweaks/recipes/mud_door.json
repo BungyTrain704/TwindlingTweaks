@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DD ",
+    "MM ",
+    "DD "
+  ],
+  "key": {
+    "D": {
+      "item": "twindlingtweaks:dried_mud_ball"
+    },
+    "key": {
+      "M": {
+        "item": "twindlingtweaks:mud_block"
+      }
+    },
+    "result": {
+      "item": "twindlingtweaks:raw_alluminite_block"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "twindlingtweaks:raw_alluminite"
+  },
+  "result": "twindlingtweaks:alluminite_nugget",
+  "experience": 0.45,
+  "cookingtime": 95
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "twindlingtweaks:lettuce"
+  },
+  "result": "twindlingtweaks:salad_toppings",
+  "experience": 0.45,
+  "cookingtime": 50
+}

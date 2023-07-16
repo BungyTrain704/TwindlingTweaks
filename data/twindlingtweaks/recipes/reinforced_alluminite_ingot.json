@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MBM",
+    "DAD",
+    "MBM"
+  ],
+  "key": {
+    "A": {
+      "item": "twindlingtweaks:alluminite_ingot"
+    },
+    "M": {
+      "item": "minecraft:diamond_block"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "twindlingtweaks:alluminite_block"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:reinforced_alluminite_ingot",
+    "count": 1
+  }
+}
