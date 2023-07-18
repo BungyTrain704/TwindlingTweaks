@@ -1,15 +1,18 @@
 package bungy.twindling.tweaks.main;
 
+import bungy.twindling.tweaks.main.screen.ModScreenHandlers;
+import bungy.twindling.tweaks.main.screen.ObsidianForgerScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
+import net.fabricmc.fabric.impl.client.container.ScreenProviderRegistryImpl;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.util.ScreenshotRecorder;
 
 
-
-    @Environment(EnvType.CLIENT)
+@Environment(EnvType.CLIENT)
     public class TTweaksClientModInitializer implements ClientModInitializer {
 
 
@@ -24,6 +27,8 @@ import net.minecraft.client.render.RenderLayer;
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.MUD_TRAPDOOR);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.MUD_DOOR);
+
+        ScreenRegistry.register(ModScreenHandlers.OBSIDIAN_FORGER_SCREEN_HANDLER, ObsidianForgerScreen::new);
 
 
     }

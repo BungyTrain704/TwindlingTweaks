@@ -9,13 +9,12 @@
     "D": {
       "item": "twindlingtweaks:dried_mud_ball"
     },
-    "key": {
       "M": {
         "item": "twindlingtweaks:mud_block"
       }
     },
     "result": {
-      "item": "twindlingtweaks:raw_alluminite_block"
+      "item": "twindlingtweaks:mud_door",
+      "count": 3
     }
   }
-}
