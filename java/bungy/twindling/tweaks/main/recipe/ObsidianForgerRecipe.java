@@ -16,6 +16,11 @@ public class ObsidianForgerRecipe implements Recipe<SimpleInventory> {
     private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
 
+    @Override
+    public DefaultedList<Ingredient> getIngredients() {
+        return this.recipeItems;
+    }
+
     public ObsidianForgerRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
         this.id = id;
         this.output = output;
@@ -51,7 +56,7 @@ public class ObsidianForgerRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public Identifier getId() {
-        return null;
+        return id;
     }
 
     @Override

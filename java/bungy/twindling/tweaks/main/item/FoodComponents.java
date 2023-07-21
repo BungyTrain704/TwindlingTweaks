@@ -18,4 +18,8 @@ public class FoodComponents {
 
     public static final FoodComponent CUCUMBER = new FoodComponent.Builder().hunger(5).saturationModifier(.8F).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 200, 1), 0.8F).build();
 
+    public static final FoodComponent ROUGH_SUGAR = new FoodComponent.Builder().hunger(1).saturationModifier(.1F).statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1200, 1), 0.8F).build();
+
+
+
 }

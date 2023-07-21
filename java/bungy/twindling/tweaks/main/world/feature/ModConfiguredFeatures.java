@@ -2,12 +2,36 @@ package bungy.twindling.tweaks.main.world.feature;
 
 
 import bungy.twindling.tweaks.main.TwindlingTweaks;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 
 public class ModConfiguredFeatures {
+
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> CATALPA_TREE =
+            ConfiguredFeatures.register("catalpa_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(TwindlingTweaks.CATALPA_LOG),
+                    new StraightTrunkPlacer(5, 6, 3),
+                    BlockStateProvider.of(TwindlingTweaks.CATALPA_LEAVES),
+                    new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
+                    new TwoLayersFeatureSize(1, 0, 2)).build());
+
+    public static final RegistryEntry<PlacedFeature> CATALPA_CHECKED =
+            PlacedFeatures.register("catalpa_checked", CATALPA_TREE,
+                    PlacedFeatures.wouldSurvive(TwindlingTweaks.CATALPA_SAPLING));
+
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> CATALPA_SPAWN =
+            ConfiguredFeatures.register("catalpa_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(CATALPA_CHECKED, 0.5f)),
+                            CATALPA_CHECKED));
+
+
     public static final List<OreFeatureConfig.Target> OVERWORLD_ALLUMINITE_ORES = List.of(
             OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
                     TwindlingTweaks.ALLUMINITE_ORE.getDefaultState()),
@@ -48,5 +72,7 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("raw_alluminite_block", Feature.ORE,
                     new OreFeatureConfig(OVERWORLD_RAW_ALLUMINITE_BLOCKS, 3));
 
+    public static void registerConfiguredFeatures() {
+    }
 }
 

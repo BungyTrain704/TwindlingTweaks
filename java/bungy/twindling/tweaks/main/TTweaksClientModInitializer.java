@@ -19,14 +19,14 @@ import net.minecraft.client.util.ScreenshotRecorder;
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.LETTUCE_SEEDS_BLOCK);
-
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.CUCUMBER_SEEDS_BLOCK);
-
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.TOMATO_SEEDS_BLOCK);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.MUD_TRAPDOOR);
-
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.MUD_DOOR);
+
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.CATALPA_LEAVES);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), TwindlingTweaks.CATALPA_SAPLING);
 
         ScreenRegistry.register(ModScreenHandlers.OBSIDIAN_FORGER_SCREEN_HANDLER, ObsidianForgerScreen::new);
 

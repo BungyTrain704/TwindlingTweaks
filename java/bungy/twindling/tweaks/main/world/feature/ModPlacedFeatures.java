@@ -4,9 +4,14 @@ import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 
 public class ModPlacedFeatures {
+
+    public static final RegistryEntry<PlacedFeature> CATALPA_PLACED = PlacedFeatures.register("catalpa_placed",
+            ModConfiguredFeatures.CATALPA_SPAWN, VegetationPlacedFeatures.modifiers(
+                    PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
 
     public static final RegistryEntry<PlacedFeature> ALLUMINITE_ORE_PLACED = PlacedFeatures.register("alluminite_ore_placed",
             ModConfiguredFeatures.ALLUMINITE_ORE, ModOreFeatures.modifiersWithCount(12,
